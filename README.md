@@ -5,23 +5,23 @@
 구조는
 
 - boot 
-      - Entry.S (리셋 벡터.)
-      - Handler.c (익셉션을 처리하는 코드.) *익셉션이란 주변장치 등에서 발생한 신호를 처리하기 위해 진행하던 프로그램 수행을 끊는 것.
-      - Main.c (메인 함수,주로 프로그래머가 작성. 관습적 c언어의 시작 지점.)
+  - Entry.S (리셋 벡터.)
+  - Handler.c (익셉션을 처리하는 코드.) *익셉션이란 주변장치 등에서 발생한 신호를 처리하기 위해 진행하던 프로그램 수행을 끊는 것.
+  - Main.c (메인 함수,주로 프로그래머가 작성. 관습적 c언어의 시작 지점.)
       
 - hal (여러 플랫폼을 지원하기 위한 구조, ex) hal/rasppi
-      - HalInterrupt.h
-      - HalTimer.h
-      - HalUart.h
-      - rvpb
-        - Interrupt.c (인터럽트 코드)
-        - Interrupt.h (인터럽트 헤더 파일)
-        - Regs.c (PL011 레지스터)
-        - Timer.c (SP804 타이머 코드/목표 카운트 레지스터 와 측정 카운트 레지스터 조합)
-        - Timer.h (타이머 헤더파일,레지스터를 구조체로 표현)
-        - Uart.c (universal Asynchronous Receiver/Transmitter)
-        - Uart.h (PL011의 레지스터 헤드,구조체로 구현)
-      
+  - HalInterrupt.h
+  - HalTimer.h
+  - HalUart.h
+  - rvpb
+    [ Interrupt.c (인터럽트 코드)
+      Interrupt.h (인터럽트 헤더 파일)
+      Regs.c (PL011 레지스터)
+      Timer.c (SP804 타이머 코드/목표 카운트 레지스터 와 측정 카운트 레지스터 조합)
+      Timer.h (타이머 헤더파일,레지스터를 구조체로 표현)
+      Uart.c (universal Asynchronous Receiver/Transmitter)
+      Uart.h (PL011의 레지스터 헤드,구조체로 구현)
+    ]
 - include
   - ARMv7AR.h (동작모드 전환값/ARM의 current program status register에 값을 설정)
   - memio.h 
